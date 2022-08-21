@@ -1,0 +1,37 @@
+﻿@page "{id}"
+@model RazorFileUploads.Pages.Files.IndexModel
+@{
+    Layout = "_Layout";
+}
+
+<div class=" text-center">
+    <h2 class="text-center text-title">Files List</h2>
+</div>
+
+@{
+    Layout = "_Layout";
+}
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <th>Files</th>
+            
+            <th>File Name</th>
+            <th>Downloads</th>
+        </tr>
+        @foreach (var file in @Model.fileList)
+        {
+            <tr>
+                <td><img src="~/FileUploads/@file.FileName" class="rounded-circle" width="40" height="40"/></td>
+               
+                <td>@file.FileName</td>
+                <td><a href="@Url.Page("Index", "DownloadFile", new { FileName = file.FileName })">Download</a></td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@file.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@file.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@file.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

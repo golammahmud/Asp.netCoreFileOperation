@@ -1,0 +1,72 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RazorFileUploads
+build_property.RootNamespace = RazorFileUploads
+build_property.ProjectDir = G:\Asp.Net Core Razor&Zamarin&Api\RazorFileUploads\RazorFileUploads\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = G:\Asp.Net Core Razor&Zamarin&Api\RazorFileUploads\RazorFileUploads
+build_property._RazorSourceGeneratorDebug = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Documents/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9jdW1lbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Files/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Files/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Files/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Files/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Files/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Files/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsZXNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Asp.Net Core Razor&Zamarin&Api/RazorFileUploads/RazorFileUploads/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-70w5gryy4m

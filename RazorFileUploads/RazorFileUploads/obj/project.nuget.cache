@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mTyJM3LoF/C1gBhKcvNRvpXEaqJMkImvqRVH4orJv9X8K29ImUiHURiFymH3HdnZSukN8WjpMYJo3O8aqCnYBw==",
+  "dgSpecHash": "IO1p+h62676/ln7RCOq36nYYeiPMK4PuBGJ0eLGpz93Lp9M9F4TG7NW5zwc8YrfrWUNhIbpAAetnMjHGtGaI2Q==",
   "success": true,
-  "projectFilePath": "G:\\Asp.Net Core Razor&Zamarin&Api\\RazorFileUploads\\RazorFileUploads\\RazorFileUploads.csproj",
+  "projectFilePath": "G:\\Asp.Net Core Razor&Zamarin&Api\\Asp.netCoreFileOperation\\RazorFileUploads\\RazorFileUploads\\RazorFileUploads.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\golam\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\golam\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

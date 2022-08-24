@@ -8,20 +8,23 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Asp.NetCoreRazorFileUpload.Data;
 using RazorFileUploads.Models;
+using Microsoft.AspNetCore.Hosting;
 
 namespace RazorFileUploads.Pages.Files
 {
     public class EditModel : PageModel
     {
         private readonly Asp.NetCoreRazorFileUpload.Data.AppDbContext _context;
-
-        public EditModel(Asp.NetCoreRazorFileUpload.Data.AppDbContext context)
+        private readonly IWebHostEnvironment webHostEnvironment;
+        public EditModel(Asp.NetCoreRazorFileUpload.Data.AppDbContext context, IWebHostEnvironment _webHostEnvironment)
         {
-            _context = context;
+            this._context = context;
+            this.webHostEnvironment =_webHostEnvironment;
         }
+        public string fileName { get; set; }
 
         [BindProperty]
-        public FileModel FileModel { get; set; } = default!;
+        public FileModel fileModel { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,33 +33,42 @@ namespace RazorFileUploads.Pages.Files
                 return NotFound();
             }
 
-            var filemodel =  await _context.FileModels.FirstOrDefaultAsync(m => m.Id == id);
-            if (filemodel == null)
+            this.fileModel =  await _context.FileModels.FirstOrDefaultAsync(m => m.Id == id);
+            if (fileModel == null)
             {
                 return NotFound();
             }
-            FileModel = filemodel;
+         
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+     
+        public async Task<IActionResult> OnPostAsync(IFormFile formFile)
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            _context.Attach(FileModel).State = EntityState.Modified;
-
+           
+            if (formFile.FileName != null)
+            {
+                if (fileModel.FileName != null)
+                {
+                    string filePath = Path.Combine(webHostEnvironment.WebRootPath, "FileUploads", fileModel.FileName);
+                    System.IO.File.Delete(filePath);
+                }
+                _context.Attach(fileModel).State = EntityState.Modified;
+            }
+            _context.Attach(fileModel).State = EntityState.Modified;
             try
             {
                 await _context.SaveChangesAsync();
+                return RedirectToPage("/List");
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!FileModelExists(FileModel.Id))
+                if (!FileModelExists(fileModel.Id))
                 {
                     return NotFound();
                 }
@@ -66,7 +78,7 @@ namespace RazorFileUploads.Pages.Files
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Edit");
         }
 
         private bool FileModelExists(int id)

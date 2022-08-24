@@ -9997,11 +9997,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Asp.Net Core Razor&Zamarin&Api\\RazorFileUploads\\RazorFileUploads\\RazorFileUploads.csproj",
+      "projectUniqueName": "G:\\Asp.Net Core Razor&Zamarin&Api\\Asp.netCoreFileOperation\\RazorFileUploads\\RazorFileUploads\\RazorFileUploads.csproj",
       "projectName": "RazorFileUploads",
-      "projectPath": "G:\\Asp.Net Core Razor&Zamarin&Api\\RazorFileUploads\\RazorFileUploads\\RazorFileUploads.csproj",
+      "projectPath": "G:\\Asp.Net Core Razor&Zamarin&Api\\Asp.netCoreFileOperation\\RazorFileUploads\\RazorFileUploads\\RazorFileUploads.csproj",
       "packagesPath": "C:\\Users\\golam\\.nuget\\packages\\",
-      "outputPath": "G:\\Asp.Net Core Razor&Zamarin&Api\\RazorFileUploads\\RazorFileUploads\\obj\\",
+      "outputPath": "G:\\Asp.Net Core Razor&Zamarin&Api\\Asp.netCoreFileOperation\\RazorFileUploads\\RazorFileUploads\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\golam\\AppData\\Roaming\\NuGet\\NuGet.Config",

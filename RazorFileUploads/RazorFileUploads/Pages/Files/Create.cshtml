@@ -3,9 +3,7 @@
 @{
     Layout = "_Layout";
 }
-<div class="   tetx-center justify-content-center">
-    <div class="row">
-        <div class="col-sm-4">
+<div class=" container  tetx-center justify-content-center align-items-center bg-light">
             <form method="post" enctype="multipart/form-data">
                 <div>
                     <label asp-validation-summery="ModelOnly" class="text-danger"></label>
@@ -15,12 +13,10 @@
                     <input asp-for="FileUploads.formFile" class="form-control" type="file" multiple />
                     <span class="text-danger" asp-validation-for="FileUploads.formFile"></span>
                 </div>
-                <div class="form-group">
+                <div class="form-group text-center py-4">
                     <input type="submit" value=" create" class="btn btn-outline-info" />
                 </div>
                 <div>@ViewData["message"]</div>
 
-            </form>
-        </div>
-    </div>
+            </form>   
 </div>

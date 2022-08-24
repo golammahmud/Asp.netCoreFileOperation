@@ -30,15 +30,13 @@ namespace RazorFileUploads.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("Created_at")
+                    b.Property<DateTime?>("Created_at")
                         .HasColumnType("datetime2");
 
                     b.Property<byte[]>("Data")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("FileName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

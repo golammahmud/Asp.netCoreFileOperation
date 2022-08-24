@@ -1,4 +1,4 @@
-﻿@page "{id}"
+﻿@page 
 @model RazorFileUploads.Pages.Files.IndexModel
 @{
     Layout = "_Layout";
@@ -27,9 +27,9 @@
                 <td>@file.FileName</td>
                 <td><a href="@Url.Page("Index", "DownloadFile", new { FileName = file.FileName })">Download</a></td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@file.Id">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@file.Id">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@file.Id">Delete</a>
+                    <a asp-page="./Edit" asp-route-fileName="@file.FileName">Edit</a> |
+                    <a asp-page="./Details" asp-route-fileName="@file.FileName">Details</a> |
+                    <a asp-page="./Delete" asp-route-fileName="@file.FileName">Delete</a>
                 </td>
             </tr>
         }

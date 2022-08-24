@@ -23,6 +23,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.FileModel[0].Data)
             </th>
+            <th>Downloads</th>
             <th>
                 @Html.DisplayNameFor(model => model.FileModel[0].Created_at)
             </th>
@@ -47,6 +48,7 @@
                     <img src="@FileSrc" class="rounded-circle" width="50" height="50"></img>
                 @*@Html.DisplayFor(modelItem => item.Data)*@
             </td>
+                <td><a href="@Url.Page("Index", "DownloadFile", new { FileName = item.FileName })">Download</a></td>
             <td>
                 @Html.DisplayFor(modelItem => item.Created_at)
             </td>

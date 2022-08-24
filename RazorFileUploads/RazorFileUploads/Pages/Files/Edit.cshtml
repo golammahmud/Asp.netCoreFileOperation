@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id}"
 @model RazorFileUploads.Pages.Files.EditModel
 
 @{
@@ -10,33 +10,58 @@
 
 <h4>FileModel</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="FileModel.Id" />
-            <div class="form-group">
-                <label asp-for="FileModel.FileName" class="control-label"></label>
-                <input asp-for="FileModel.FileName" class="form-control" />
-                <span asp-validation-for="FileModel.FileName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FileModel.Data" class="control-label"></label>
-                <input asp-for="FileModel.Data" class="form-control" />
-                <span asp-validation-for="FileModel.Data" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FileModel.Created_at" class="control-label"></label>
-                <input asp-for="FileModel.Created_at" class="form-control" />
-                <span asp-validation-for="FileModel.Created_at" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="fileModel.Id" />
 
+                <div class="form-group">
+                      @*<div class="form-group">
+                        <label asp-for="fileModel.FileName" class="control-label"></label>
+                        <input asp-for="fileModel.FileName" class="form-control" />
+                        <span asp-validation-for="fileModel.FileName" class="text-danger"></span>
+                       </div>*@
+                    @if (Model.fileModel.Data != null)
+                    {
+                        <div class="row py-4 align-items-center">
+                            <div class="col-sm-6">
+                                <label asp-for="fileModel.Data" class="control-label"></label>
+                                <input asp-for="fileModel.Data" class="form-control" type="file" multiple required="false" />
+                                <span asp-validation-for="fileModel.Data" class="text-danger"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                @{
+                                    var base64 = Convert.ToBase64String(Model.fileModel.Data);
+                                    var FileSrc = string.Format("data:image/gif;base64,{0}", base64);
+                                }
+                                <img src="@FileSrc" class="rounded" width="150" height="150"></img>
+                            </div>
+                        </div>
+                       }else{
+                        <div class="col-sm-12">
+                            <label asp-for="fileModel.FileName" class="control-label"></label>
+                            <input asp-for="fileModel.FileName" class="form-control" type="file" multiple />
+                            <span asp-validation-for="fileModel.FileName" class="text-danger"></span>
+                        </div>
+                       }
+                       
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="fileModel.Created_at" class="control-label"></label>
+                    <input asp-for="fileModel.Created_at" class="form-control" />
+                    <span asp-validation-for="fileModel.Created_at" class="text-danger"></span>
+                </div>
+                <div class="form-group text-center py-4">
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>

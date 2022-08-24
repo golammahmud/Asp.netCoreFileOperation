@@ -9,24 +9,20 @@ namespace RazorFileUploads.Pages.Files
     public class CreateModel : PageModel
     {
         private readonly IWebHostEnvironment webHostEnvironmentl;
-
         private readonly AppDbContext appDbContext;
-
 
         public CreateModel(IWebHostEnvironment _webHostEnvironment, AppDbContext _appDbContext)
         {
             this.webHostEnvironmentl = _webHostEnvironment;
             this.appDbContext = _appDbContext;
         }
-
         [BindProperty]
         public FileViewModel FileUploads { get; set; } = default!;
         public void OnGet()
         {
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public async Task<IActionResult> OnPostAsync()
         {
             if (ModelState.IsValid)
@@ -54,7 +50,7 @@ namespace RazorFileUploads.Pages.Files
                         await appDbContext.FileModels.AddAsync(file);
                         await appDbContext.SaveChangesAsync();
                         ViewData["message"] = "file uploaded succefully";
-                        return RedirectToPage("/Files/Index");
+                        return RedirectToPage("/Files/List");
                     }
                     else
                     {

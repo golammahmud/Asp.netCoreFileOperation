@@ -14,9 +14,11 @@ namespace RazorFileUploads.Pages.Files
     {
         private readonly Asp.NetCoreRazorFileUpload.Data.AppDbContext _context;
 
-        public ListModel(Asp.NetCoreRazorFileUpload.Data.AppDbContext context)
+        private readonly IWebHostEnvironment webHostEnvironmentl;
+        public ListModel(IWebHostEnvironment _webHostEnvironment, Asp.NetCoreRazorFileUpload.Data.AppDbContext context)
         {
-            _context = context;
+            this._context = context;
+            this.webHostEnvironmentl = _webHostEnvironment;
         }
 
         public IList<FileModel> FileModel { get;set; } = default!;
@@ -27,6 +29,17 @@ namespace RazorFileUploads.Pages.Files
             {
                 FileModel = await _context.FileModels.ToListAsync();
             }
+        }
+        public FileResult OnGetDownloadFile(string fileName)
+        {
+            //Build the File Path.
+            string path = Path.Combine(this.webHostEnvironmentl.WebRootPath, "FileUploads/") + fileName;
+
+            //Read the File data into Byte Array.
+            byte[] bytes = System.IO.File.ReadAllBytes(path);
+
+            //Send the File to Download.
+            return File(bytes, "application/octet-stream", fileName);
         }
     }
 }
